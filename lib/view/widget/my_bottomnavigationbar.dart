@@ -27,7 +27,7 @@ class _MyBottomNavigationBarState extends State<MyBottomNavigationBar> {
   @override
   Widget build(BuildContext context) {
     return BottomNavigationBar(
-      items: [
+      items: const [
         BottomNavigationBarItem(label: "Home", icon: Icon(Icons.home)),
         BottomNavigationBarItem(label: "About", icon: Icon(Icons.zoom_out))
       ],
@@ -36,7 +36,7 @@ class _MyBottomNavigationBarState extends State<MyBottomNavigationBar> {
         //Navigator.pushNamed(context, MyApp.routes.keys.elementAt(index));
         pageController.animateToPage(
           index,
-          duration: const Duration(milliseconds: 400),
+          duration: const Duration(milliseconds: 100),
           curve: Curves.easeInOut,
         );
         setState(() {
