@@ -9,7 +9,8 @@ class HomePage extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return PageView(
-      //physics: NeverScrollableScrollPhysics(),
+      physics: NeverScrollableScrollPhysics(),
+      controller: homePageController,
       scrollDirection: Axis.vertical,
       children: [
         WelcomeWidget(homePageController, key),
